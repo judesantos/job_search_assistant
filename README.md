@@ -1,7 +1,10 @@
 # Job Search Assistant
+---
 
 ## Overview
 The Job Search Assistant is an intelligent job-matching application that utilizes **Azure OpenAI (AzureChatOpenAI)** and **CrewAI** to analyze resumes, search for job postings, and rate job opportunities. The application integrates job search APIs like **Jooble** and **Glassdoor** to retrieve job listings and provides structured evaluations based on user-submitted resumes and job preferences.
+
+---
 
 ## Features
 - **Resume Analysis**: Extracts and processes key information from uploaded resumes.
@@ -11,12 +14,30 @@ The Job Search Assistant is an intelligent job-matching application that utilize
 - **Flask Web API**: Accepts job search parameters such as keywords, job location, and resume files.
 - **Structured JSON Output**: Provides well-formatted results for easy integration.
 
+---
+
 ## Tech Stack
 - **Backend**: Python, Flask
 - **AI Models**: Azure OpenAI (AzureChatOpenAI)
 - **Orchestration**: CrewAI
 - **Job Search APIs**: Jooble, Glassdoor
 - **Data Processing**: Python, Pandas
+
+### Setting Up Accounts & API Keys
+
+To use the application, you need API keys for Jooble and Azure OpenAI. Follow the steps below to set up your accounts:
+
+#### Jooble API
+- Sign up for a Jooble API key at [Jooble API](https://jooble.org/api/about).
+- Once registered, obtain your JOOBLE_HOST and JOOBLE_API_KEY.
+
+#### Azure OpenAI API
+- Sign up for an Azure account at [Azure Portal](https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?redirect_uri=https%3A%2F%2Fportal.azure.com%2Fsignin%2Findex%2F&response_type=code%20id_token&scope=https%3A%2F%2Fmanagement.core.windows.net%2F%2Fuser_impersonation%20openid%20email%20profile&state=OpenIdConnect.AuthenticationProperties%3DmsvIcQ2tdnIXeJa96ozN49dXD2XPVBqIpx-9O3Hb4eopnHuAanQ5At02iWirBY2gwmmnOfi9gwH3I5rpJhepmjglzGqpYd9ckEcLI-881rfHyvVeXSyEwzK1hBVkAm4cyz8rQ2V7oIbHusCu9ufB6NOWGvgOX1pmniu_ePA2GBW72w-1PR27dZ8trNMXTMFkHpleVRs-dyxrbPIWZdejLc3yP22IsWIH3PgWButHfjYLoCr_IKYduSMduNU1sBq50WQjB-Eri2MFNuQo4J_q529Z07mBSVoyB8EyMrFwH8RaI4sBIEm5FRDiHRnU1ijxwzFEvkKd_b8mYPiMwQrDFT80jgGMNv5GMSmHbzhDyNDuANcqWa6FA88UuHQLGENgTPOEIL-sRTnt6bRTbIO5RAxGY9HxerB_RihAuEbDHZZsCMTWLJCR3b8w0gg6yhKNgAJwD7rKs2XiVMzQO2p6OBdVMHu7-ssaZse6lSeha18&response_mode=form_post&nonce=638762877063219873.MGMwNzdmNTMtZTE0Ny00NjAwLTliNmYtOGU2NTY4MDlhMDRjMWZiOTkyODktZTVhNC00OThmLWEyNWEtODY0MjJmN2EwNWIz&client_id=c44b4083-3bb0-49c1-b47d-974e53cbdf3c&site_id=501430&client-request-id=989489b1-e658-49c4-824e-be46fdd2446f&x-client-SKU=ID_NET472&x-client-ver=7.5.0.0).
+- Navigate to Azure OpenAI Service and deploy a new model.
+- Retrieve your AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_KEY, and OPENAI_API_VERSION.
+- For additional documentation, visit [Azure OpenAI Docs](https://learn.microsoft.com/en-us/azure/ai-services/openai/).
+
+---
 
 ## Project Structure
 ```
@@ -54,6 +75,8 @@ The Job Search Assistant is an intelligent job-matching application that utilize
         └── results.html # Job search results page
 ```
 
+---
+
 ## Installation
 1. **Clone the repository**:
    ```bash
@@ -81,6 +104,14 @@ The Job Search Assistant is an intelligent job-matching application that utilize
      AZURE_OPENAI_KEY=<the_azure_openai_key_in_your_azure_account>
      OPENAI_API_VERSION=<the_openai_api_version_in_your_azure_account>
      ```
+---
+
+## Documentation Links
+- **Azure OpenAI:** Azure OpenAI Docs
+- **Jooble API:** Jooble API Docs
+- **CrewAI:** CrewAI Documentation
+
+---
 
 ## Usage
 ### Running the Web API
@@ -93,6 +124,7 @@ Access the web app at: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 ```bash
 python src/main.py --resume data/resumes/sample_resume.txt --keywords "Software Engineer" --location "New York"
 ```
+---
 
 ## API Endpoints
 ### 1. **Upload Resume & Search Jobs**
@@ -108,6 +140,8 @@ python src/main.py --resume data/resumes/sample_resume.txt --keywords "Software 
    - **Endpoint:** `/results`
    - **Method:** `GET`
    - **Response:** JSON object with job listings and evaluations.
+
+---
 
 ## JSON Output Format
 ```json
@@ -129,14 +163,19 @@ python src/main.py --resume data/resumes/sample_resume.txt --keywords "Software 
   ]
 }
 ```
+---
 
 ## Future Enhancements
 - **Add more job search sources (LinkedIn, Indeed, etc.)**
 - **Improve AI matching using deep learning models**
 - **Enhance Flask UI for better user experience**
 
+---
+
 ## Contributors
-- **Your Name** ([@yourgithub](https://github.com/yourgithub))
+- **Jude Santos** ([judesantos](https://github.com/judesantos))
+
+---
 
 ## License
 This project is licensed under the MIT License.
