@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload and Job Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="full-container">
+        <div class="qualifications">
+        {% if text %}
+            <h2>Your Qualifications</h2>
+            <pre>{{ text }}</pre>
+        {% endif %}
+        </div>
+
+        <div class="job-results">
+            <h2 class="success">Job Search Results</h2>
+            Here are your job results based on your query:
+            <p>
+                <b>Keywords:</b>&nbsp;{{ keywords }}
+                <b>Location:</b>&nbsp;{{ location }}
+            </p>
+
+            {% if jobs %}
+                {% for job in jobs %}
+                    <div class="job-listing">
+                        <h3>{{ job.title }}</h3>
+                        <p><strong>Company:</strong> {{ job.company.display_name }}</p>
+                        <p><strong>Location:</strong> {{ job.location.display_name }}</p>
+                        <p><strong>Description:</strong> {{ job.description }}</p>
+                        <p><a href="{{ job.url }}" target="_blank">View Job</a></p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No jobs found.</p>
+            {% endif %}
+
+        </div>
+    </div>
+</body>
+</html>

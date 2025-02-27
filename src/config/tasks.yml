@@ -1,0 +1,40 @@
+# configs/tasks.yml
+
+job_search_task:
+  description: |
+    Search for job listings that match the following criteria: {keywords}.
+    Compile a comprehensive list of relevant job postings with detailed information.
+  expected_output: A structured JSON output containing a list of jobs with all relevant details, ensuring that all field names remain consistent.
+
+job_rating:
+  description: |
+    Using your tools to find the resume file information.
+    Provide an additional rating on the jobs you received in context according to the Resume information.
+    The rating is between 1-10 where 10 is the best fit. Every job should have a rating.
+    Additionally add a rating_description field that explains the reasoning behind the number of rating in 1 or 2 sentences.
+    Make sure that all information about the jobs is also maintained in the output.
+  expected_output:  A structured output as a valid json of the list of jobs found and their respective ratings. Make sure that field names are kept the same.
+
+job_rating_task:
+  description: |
+    Extract and analyze resume information from the provided file.
+    Rate each job listing based on its alignment with the resume details, assigning a rating from 1 to 10 (where 10 indicates the best fit).
+    Include a rating_description field with a one- to two-sentence explanation of the rating.
+    Ensure that all original job details remain unchanged in the output.
+  expected_output: A structured JSON output containing the list of jobs, their respective ratings, and rating descriptions, while preserving all original field names.
+
+evaluate_company_task:
+  description: |
+    Using your tools find information about the company of jobs.
+    Information can include company culture reviews, company financial reports, and stock performance.
+    provide an additional rating for the company in a field called company_rating.
+    The rating is between 1-10 where 10 is the best rating. Every job should have a rating.
+    Additionally add a company_rating_description field that explains the reasoning behind the number of rating in 1 or 2 sentences.
+    Make sure that all information about the jobs is also maintained in the output.
+  expected_output:  A structured output as a valid json of the list of jobs found and their respective ratings, make sure to structure all information according this model {output_schema}
+
+structure_results_task:
+  description: |
+    Use all provided context to structure the final output in the required format.
+  expected_output: A fully structured JSON output of the job listings with ratings and company evaluations, formatted according to the required {output_schema}, ensuring validity and consistency.
+
