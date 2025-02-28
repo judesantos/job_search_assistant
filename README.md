@@ -86,7 +86,7 @@ To use the application, you need API keys for Jooble and Azure OpenAI. Follow th
 2. **Set up the Miniconda environment**:
    ```bash
    conda env create -f environment.yml
-   conda activate job-search-assistant
+   conda activate mlagent
    ```
 3. **Install dependencies**:
    ```bash
