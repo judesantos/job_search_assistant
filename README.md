@@ -20,7 +20,7 @@ Role Match AI is an intelligent job-matching application that utilizes **Azure O
 - **Backend**: Python, Flask
 - **AI Models**: Azure OpenAI (AzureChatOpenAI)
 - **Orchestration**: CrewAI
-- **Job Search APIs**: Jooble, Glassdoor
+- **Job Search and Ratings APIs**: Jooble, Serper
 - **Data Processing**: Python, Pandas
 
 ### Setting Up Accounts & API Keys
@@ -30,6 +30,10 @@ To use the application, you need API keys for Jooble and Azure OpenAI. Follow th
 #### Jooble API
 - Sign up for a Jooble API key at [Jooble API](https://jooble.org/api/about).
 - Once registered, obtain your JOOBLE_HOST and JOOBLE_API_KEY.
+
+#### Serper API
+- Sign Up: Create a free account at [Serper](https://serper.dev).
+- Obtain API Key: Once registered, acquire your SERPER_API_KEY.
 
 #### Azure OpenAI API
 - Sign up for an Azure account at [Azure Portal](https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?redirect_uri=https%3A%2F%2Fportal.azure.com%2Fsignin%2Findex%2F&response_type=code%20id_token&scope=https%3A%2F%2Fmanagement.core.windows.net%2F%2Fuser_impersonation%20openid%20email%20profile&state=OpenIdConnect.AuthenticationProperties%3DmsvIcQ2tdnIXeJa96ozN49dXD2XPVBqIpx-9O3Hb4eopnHuAanQ5At02iWirBY2gwmmnOfi9gwH3I5rpJhepmjglzGqpYd9ckEcLI-881rfHyvVeXSyEwzK1hBVkAm4cyz8rQ2V7oIbHusCu9ufB6NOWGvgOX1pmniu_ePA2GBW72w-1PR27dZ8trNMXTMFkHpleVRs-dyxrbPIWZdejLc3yP22IsWIH3PgWButHfjYLoCr_IKYduSMduNU1sBq50WQjB-Eri2MFNuQo4J_q529Z07mBSVoyB8EyMrFwH8RaI4sBIEm5FRDiHRnU1ijxwzFEvkKd_b8mYPiMwQrDFT80jgGMNv5GMSmHbzhDyNDuANcqWa6FA88UuHQLGENgTPOEIL-sRTnt6bRTbIO5RAxGY9HxerB_RihAuEbDHZZsCMTWLJCR3b8w0gg6yhKNgAJwD7rKs2XiVMzQO2p6OBdVMHu7-ssaZse6lSeha18&response_mode=form_post&nonce=638762877063219873.MGMwNzdmNTMtZTE0Ny00NjAwLTliNmYtOGU2NTY4MDlhMDRjMWZiOTkyODktZTVhNC00OThmLWEyNWEtODY0MjJmN2EwNWIz&client_id=c44b4083-3bb0-49c1-b47d-974e53cbdf3c&site_id=501430&client-request-id=989489b1-e658-49c4-824e-be46fdd2446f&x-client-SKU=ID_NET472&x-client-ver=7.5.0.0).
