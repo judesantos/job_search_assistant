@@ -1,8 +1,8 @@
-# Job Search Assistant
+# Role Match AI
 ---
 
 ## Overview
-The Job Search Assistant is an intelligent job-matching application that utilizes **Azure OpenAI (AzureChatOpenAI)** and **CrewAI** to analyze resumes, search for job postings, and rate job opportunities. The application integrates job search APIs like **Jooble** and **Glassdoor** to retrieve job listings and provides structured evaluations based on user-submitted resumes and job preferences.
+Role Match AI is an intelligent job-matching application that utilizes **Azure OpenAI (AzureChatOpenAI)** and **CrewAI** to analyze resumes, search for job postings, and rate job opportunities. The application integrates job search APIs like **Jooble** and **Glassdoor** to retrieve job listings and provides structured evaluations based on user-submitted resumes and job preferences.
 
 ---
 
