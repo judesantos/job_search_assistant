@@ -81,7 +81,7 @@ To use the application, you need API keys for Jooble and Azure OpenAI. Follow th
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/judesantos/job_search_assistant.git
-   cd job-search-assistant
+   cd job_search_assistant
    ```
 2. **Set up the Miniconda environment**:
    ```bash
